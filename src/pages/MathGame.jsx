@@ -9,7 +9,7 @@ const MathGame = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [currentQues, setCurrentQues] = useState({});
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(30);
 
   const questionObj =
     useSelector((state) => state.answers.answers.find((el) => el.id == id)) ||
@@ -28,7 +28,7 @@ const MathGame = () => {
   }, [timer, currentQues]);
 
   useEffect(() => {
-    setTimer(5);
+    setTimer(30);
   }, [id]);
   useEffect(() => {
     setCurrentQues(questionObj);
